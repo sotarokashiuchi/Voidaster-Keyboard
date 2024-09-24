@@ -232,7 +232,9 @@
       "keebio",
       "kbd"
     ],
-    "pinned_symbol_libs": []
+    "pinned_symbol_libs": [
+      "kbd"
+    ]
   },
   "meta": {
     "filename": "pcb.kicad_pro",
