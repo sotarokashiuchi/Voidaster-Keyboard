@@ -388,7 +388,8 @@
   "libraries": {
     "pinned_footprint_libs": [
       "keebio",
-      "kbd"
+      "kbd",
+      "lib"
     ],
     "pinned_symbol_libs": [
       "kbd",
