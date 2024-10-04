@@ -2,4 +2,5 @@
   (version 7)
   (lib (name "kbd")(type "KiCad")(uri "${KIPRJMOD}/kbd/kicad-footprints/kbd.pretty")(options "")(descr ""))
   (lib (name "keebio")(type "KiCad")(uri "${KIPRJMOD}/Keebio-Parts.pretty")(options "")(descr ""))
+  (lib (name "lib")(type "KiCad")(uri "${KIPRJMOD}/lib")(options "")(descr ""))
 )
