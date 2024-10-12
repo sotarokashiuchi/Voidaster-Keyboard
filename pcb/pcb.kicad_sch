@@ -16035,7 +16035,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Connector_PinSocket_2.54mm:PinSocket_1x06_P2.54mm_Horizontal"
+		(property "Footprint" "lib:PinSocket_1x06_P2.54mm_Horizontal"
 			(at 182.88 259.08 0)
 			(effects
 				(font
@@ -17251,7 +17251,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Connector_JST:JST_XH_S2B-XH-A_1x02_P2.50mm_Horizontal"
+		(property "Footprint" "lib:JST_XH_S2B-XH-A_1x02_P2.50mm_Horizontal"
 			(at 254 198.501 90)
 			(effects
 				(font
