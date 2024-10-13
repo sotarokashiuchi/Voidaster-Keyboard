@@ -1,4 +1,4 @@
-(footprint "keyswitch_cherrymx_hotswap_1u_no_hole"
+(footprint "keyswitch_cherrymx_hotswap_1u"
 	(version 20240108)
 	(generator "pcbnew")
 	(generator_version "8.0")
@@ -16,7 +16,7 @@
 			)
 		)
 	)
-	(property "Value" "keyswitch_cherrymx_hotswap_1u_no_hole"
+	(property "Value" "keyswitch_cherrymx_hotswap_1u"
 		(at 0 -7.8 0)
 		(layer "F.Fab")
 		(hide yes)
@@ -33,7 +33,7 @@
 		(at 0 0 0)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "82745b68-6982-4392-a5f4-431a5acaef94")
+		(uuid "bf89f31c-4c01-4fef-85d4-9dcd03206371")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -45,7 +45,7 @@
 		(at 0 0 0)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "d71a01d8-4868-4272-a0d8-65b3626b2b1c")
+		(uuid "f80dc1cf-aaee-4551-bcca-2532adcd6787")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -57,7 +57,7 @@
 		(at 0 0 0)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "8419fe77-9551-4512-a7b6-e9a28b36fc7d")
+		(uuid "8679c764-3e02-422e-b3b0-eb586effc53b")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -187,6 +187,13 @@
 		(uuid "99f66cea-78fe-49b9-ae9d-8c0c8b190010")
 	)
 	(pad "" np_thru_hole circle
+		(at -5.08 0)
+		(size 1.9 1.9)
+		(drill 1.9)
+		(layers "*.Cu" "*.Mask")
+		(uuid "ad9584c4-d4ec-406c-989b-8a92dc0b16f5")
+	)
+	(pad "" np_thru_hole circle
 		(at -2.54 -5.08)
 		(size 3 3)
 		(drill 3)
@@ -194,11 +201,25 @@
 		(uuid "f4880e72-302c-4e65-9d08-e0cbc87f1905")
 	)
 	(pad "" np_thru_hole circle
+		(at 0 0 270)
+		(size 4.1 4.1)
+		(drill 4.1)
+		(layers "*.Cu" "*.Mask")
+		(uuid "6dabfcb3-da35-4fbd-920a-f3f793dc41d5")
+	)
+	(pad "" np_thru_hole circle
 		(at 3.81 -2.54)
 		(size 3 3)
 		(drill 3)
 		(layers "F&B.Cu" "*.Mask")
 		(uuid "5b9949b0-9c03-44e8-95fe-570baad24885")
+	)
+	(pad "" np_thru_hole circle
+		(at 5.08 0)
+		(size 1.9 1.9)
+		(drill 1.9)
+		(layers "*.Cu" "*.Mask")
+		(uuid "debcffcc-2e77-4306-a193-25bf2e688275")
 	)
 	(pad "1" smd rect
 		(at 7.085 -2.54 180)

@@ -2256,6 +2256,88 @@
 				)
 			)
 		)
+		(symbol "Mechanical:MountingHole"
+			(pin_names
+				(offset 1.016)
+			)
+			(exclude_from_sim yes)
+			(in_bom no)
+			(on_board yes)
+			(property "Reference" "H"
+				(at 0 5.08 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "MountingHole"
+				(at 0 3.175 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Mounting Hole without connection"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "mounting hole"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "MountingHole*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "MountingHole_0_1"
+				(circle
+					(center 0 0)
+					(radius 1.27)
+					(stroke
+						(width 1.27)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+		)
 		(symbol "Power_Protection:USBLC6-2SC6"
 			(pin_names hide)
 			(exclude_from_sim no)
@@ -9350,7 +9432,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "keebio:Resistor-Hybrid"
+		(property "Footprint" "lib:Resistor-Hybrid_rev"
 			(at 141.732 154.94 90)
 			(effects
 				(font
@@ -9734,6 +9816,70 @@
 		)
 	)
 	(symbol
+		(lib_id "Mechanical:MountingHole")
+		(at 52.07 266.7 0)
+		(unit 1)
+		(exclude_from_sim yes)
+		(in_bom no)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "10e12662-0e19-45c7-86c2-4adacb3f8bb9")
+		(property "Reference" "H7"
+			(at 54.61 265.4299 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MountingHole_2.2mm_M2"
+			(at 54.61 267.9699 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "MountingHole:MountingHole_2.2mm_M2"
+			(at 52.07 266.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 52.07 266.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 52.07 266.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "pcb"
+				(path "/ca1682eb-af97-4baf-a70b-d30c3b256c66"
+					(reference "H7")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "kbd:SW_PUSH")
 		(at 224.79 137.16 0)
 		(unit 1)
@@ -9759,7 +9905,7 @@
 				)
 			)
 		)
-		(property "Footprint" "kbd:keyswitch_cherrymx_hotswap_1u"
+		(property "Footprint" "lib:keyswitch_cherrymx_hotswap_1u"
 			(at 224.79 137.16 0)
 			(effects
 				(font
@@ -9978,7 +10124,7 @@
 				)
 			)
 		)
-		(property "Footprint" "kbd:keyswitch_cherrymx_hotswap_1u"
+		(property "Footprint" "lib:keyswitch_cherrymx_hotswap_1u"
 			(at 275.59 73.66 0)
 			(effects
 				(font
@@ -10123,7 +10269,7 @@
 				)
 			)
 		)
-		(property "Footprint" "kbd:keyswitch_cherrymx_hotswap_1u"
+		(property "Footprint" "lib:keyswitch_cherrymx_hotswap_1u"
 			(at 326.39 168.91 0)
 			(effects
 				(font
@@ -10256,7 +10402,7 @@
 				)
 			)
 		)
-		(property "Footprint" "kbd:keyswitch_cherrymx_hotswap_1u"
+		(property "Footprint" "lib:keyswitch_cherrymx_hotswap_1u"
 			(at 275.59 148.59 0)
 			(effects
 				(font
@@ -10323,7 +10469,7 @@
 				)
 			)
 		)
-		(property "Footprint" "kbd:keyswitch_cherrymx_hotswap_1u"
+		(property "Footprint" "lib:keyswitch_cherrymx_hotswap_1u"
 			(at 351.79 85.09 0)
 			(effects
 				(font
@@ -10390,7 +10536,7 @@
 				)
 			)
 		)
-		(property "Footprint" "kbd:keyswitch_cherrymx_hotswap_1u"
+		(property "Footprint" "lib:keyswitch_cherrymx_hotswap_1u"
 			(at 300.99 105.41 0)
 			(effects
 				(font
@@ -10457,7 +10603,7 @@
 				)
 			)
 		)
-		(property "Footprint" "kbd:keyswitch_cherrymx_hotswap_1u"
+		(property "Footprint" "lib:keyswitch_cherrymx_hotswap_1u"
 			(at 224.79 148.59 0)
 			(effects
 				(font
@@ -10648,6 +10794,70 @@
 			(project "pcb"
 				(path "/ca1682eb-af97-4baf-a70b-d30c3b256c66"
 					(reference "SW12")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Mechanical:MountingHole")
+		(at 52.07 261.62 0)
+		(unit 1)
+		(exclude_from_sim yes)
+		(in_bom no)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "279a63f4-5bfb-45be-9401-e3c4a37f8f32")
+		(property "Reference" "H6"
+			(at 54.61 260.3499 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MountingHole_2.2mm_M2"
+			(at 54.61 262.8899 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "MountingHole:MountingHole_2.2mm_M2"
+			(at 52.07 261.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 52.07 261.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 52.07 261.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "pcb"
+				(path "/ca1682eb-af97-4baf-a70b-d30c3b256c66"
+					(reference "H6")
 					(unit 1)
 				)
 			)
@@ -10950,7 +11160,7 @@
 				)
 			)
 		)
-		(property "Footprint" "kbd:keyswitch_cherrymx_hotswap_1u"
+		(property "Footprint" "lib:keyswitch_cherrymx_hotswap_1u"
 			(at 300.99 148.59 0)
 			(effects
 				(font
@@ -11091,7 +11301,7 @@
 				)
 			)
 		)
-		(property "Footprint" "kbd:keyswitch_cherrymx_hotswap_1u"
+		(property "Footprint" "lib:keyswitch_cherrymx_hotswap_1u"
 			(at 377.19 85.09 0)
 			(effects
 				(font
@@ -11225,7 +11435,7 @@
 				)
 			)
 		)
-		(property "Footprint" "kbd:keyswitch_cherrymx_hotswap_1u"
+		(property "Footprint" "lib:keyswitch_cherrymx_hotswap_1u"
 			(at 377.19 168.91 0)
 			(effects
 				(font
@@ -11366,7 +11576,7 @@
 				)
 			)
 		)
-		(property "Footprint" "kbd:keyswitch_cherrymx_hotswap_1u"
+		(property "Footprint" "lib:keyswitch_cherrymx_hotswap_1u"
 			(at 377.19 105.41 0)
 			(effects
 				(font
@@ -11433,7 +11643,7 @@
 				)
 			)
 		)
-		(property "Footprint" "kbd:keyswitch_cherrymx_hotswap_1u"
+		(property "Footprint" "lib:keyswitch_cherrymx_hotswap_1u"
 			(at 250.19 73.66 0)
 			(effects
 				(font
@@ -11500,7 +11710,7 @@
 				)
 			)
 		)
-		(property "Footprint" "kbd:keyswitch_cherrymx_hotswap_1u"
+		(property "Footprint" "lib:keyswitch_cherrymx_hotswap_1u"
 			(at 250.19 85.09 0)
 			(effects
 				(font
@@ -11567,7 +11777,7 @@
 				)
 			)
 		)
-		(property "Footprint" "kbd:keyswitch_cherrymx_hotswap_1u"
+		(property "Footprint" "lib:keyswitch_cherrymx_hotswap_1u"
 			(at 326.39 137.16 0)
 			(effects
 				(font
@@ -11701,7 +11911,7 @@
 				)
 			)
 		)
-		(property "Footprint" "kbd:keyswitch_cherrymx_hotswap_1u"
+		(property "Footprint" "lib:keyswitch_cherrymx_hotswap_1u"
 			(at 326.39 105.41 0)
 			(effects
 				(font
@@ -11835,7 +12045,7 @@
 				)
 			)
 		)
-		(property "Footprint" "kbd:keyswitch_cherrymx_hotswap_1u"
+		(property "Footprint" "lib:keyswitch_cherrymx_hotswap_1u"
 			(at 377.19 148.59 0)
 			(effects
 				(font
@@ -11901,7 +12111,7 @@
 				)
 			)
 		)
-		(property "Footprint" "keebio:Resistor-Hybrid"
+		(property "Footprint" "lib:Resistor-Hybrid"
 			(at 62.738 210.82 90)
 			(effects
 				(font
@@ -11938,6 +12148,70 @@
 			(project "pcb"
 				(path "/ca1682eb-af97-4baf-a70b-d30c3b256c66"
 					(reference "R6")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Mechanical:MountingHole")
+		(at 52.07 256.54 0)
+		(unit 1)
+		(exclude_from_sim yes)
+		(in_bom no)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "45f2dddc-daa3-4b13-8dfd-c6960e237337")
+		(property "Reference" "H5"
+			(at 54.61 255.2699 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MountingHole_2.2mm_M2"
+			(at 54.61 257.8099 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "MountingHole:MountingHole_2.2mm_M2"
+			(at 52.07 256.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 52.07 256.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 52.07 256.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "pcb"
+				(path "/ca1682eb-af97-4baf-a70b-d30c3b256c66"
+					(reference "H5")
 					(unit 1)
 				)
 			)
@@ -12344,7 +12618,7 @@
 				)
 			)
 		)
-		(property "Footprint" "kbd:keyswitch_cherrymx_hotswap_1u"
+		(property "Footprint" "lib:keyswitch_cherrymx_hotswap_1u"
 			(at 351.79 105.41 0)
 			(effects
 				(font
@@ -12410,7 +12684,7 @@
 				)
 			)
 		)
-		(property "Footprint" "keebio:Resistor-Hybrid"
+		(property "Footprint" "lib:Resistor-Hybrid"
 			(at 62.738 195.58 90)
 			(effects
 				(font
@@ -12545,7 +12819,7 @@
 				)
 			)
 		)
-		(property "Footprint" "kbd:keyswitch_cherrymx_hotswap_1u"
+		(property "Footprint" "lib:keyswitch_cherrymx_hotswap_1u"
 			(at 275.59 105.41 0)
 			(effects
 				(font
@@ -13361,6 +13635,70 @@
 		)
 	)
 	(symbol
+		(lib_id "Mechanical:MountingHole")
+		(at 52.07 271.78 0)
+		(unit 1)
+		(exclude_from_sim yes)
+		(in_bom no)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "592db42b-ddef-48ae-adfc-cefb56793012")
+		(property "Reference" "H8"
+			(at 54.61 270.5099 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MountingHole_2.2mm_M2"
+			(at 54.61 273.0499 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "MountingHole:MountingHole_2.2mm_M2"
+			(at 52.07 271.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 52.07 271.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 52.07 271.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "pcb"
+				(path "/ca1682eb-af97-4baf-a70b-d30c3b256c66"
+					(reference "H8")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "kbd:SW_PUSH")
 		(at 377.19 73.66 0)
 		(unit 1)
@@ -13386,7 +13724,7 @@
 				)
 			)
 		)
-		(property "Footprint" "kbd:keyswitch_cherrymx_hotswap_1u"
+		(property "Footprint" "lib:keyswitch_cherrymx_hotswap_1u"
 			(at 377.19 73.66 0)
 			(effects
 				(font
@@ -13519,7 +13857,7 @@
 				)
 			)
 		)
-		(property "Footprint" "kbd:keyswitch_cherrymx_hotswap_1u"
+		(property "Footprint" "lib:keyswitch_cherrymx_hotswap_1u"
 			(at 275.59 137.16 0)
 			(effects
 				(font
@@ -13962,7 +14300,7 @@
 				)
 			)
 		)
-		(property "Footprint" "kbd:keyswitch_cherrymx_hotswap_1u"
+		(property "Footprint" "lib:keyswitch_cherrymx_hotswap_1u"
 			(at 300.99 137.16 0)
 			(effects
 				(font
@@ -14099,7 +14437,7 @@
 				)
 			)
 		)
-		(property "Footprint" "kbd:keyswitch_cherrymx_hotswap_1u"
+		(property "Footprint" "lib:keyswitch_cherrymx_hotswap_1u"
 			(at 224.79 85.09 0)
 			(effects
 				(font
@@ -14450,7 +14788,7 @@
 				)
 			)
 		)
-		(property "Footprint" "keebio:Resistor-Hybrid"
+		(property "Footprint" "lib:Resistor-Hybrid_rev"
 			(at 115.57 118.872 90)
 			(effects
 				(font
@@ -14760,7 +15098,7 @@
 				)
 			)
 		)
-		(property "Footprint" "kbd:keyswitch_cherrymx_hotswap_1u"
+		(property "Footprint" "lib:keyswitch_cherrymx_hotswap_1u"
 			(at 351.79 148.59 0)
 			(effects
 				(font
@@ -15014,7 +15352,7 @@
 				)
 			)
 		)
-		(property "Footprint" "kbd:keyswitch_cherrymx_hotswap_1u"
+		(property "Footprint" "lib:keyswitch_cherrymx_hotswap_1u"
 			(at 300.99 168.91 0)
 			(effects
 				(font
@@ -15243,7 +15581,7 @@
 				)
 			)
 		)
-		(property "Footprint" "kbd:keyswitch_cherrymx_hotswap_1u"
+		(property "Footprint" "lib:keyswitch_cherrymx_hotswap_1u"
 			(at 351.79 73.66 0)
 			(effects
 				(font
@@ -15979,6 +16317,70 @@
 		)
 	)
 	(symbol
+		(lib_id "Mechanical:MountingHole")
+		(at 85.09 241.3 0)
+		(unit 1)
+		(exclude_from_sim yes)
+		(in_bom no)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "8b4a0b4e-74e2-4c93-bb93-16fbcd6f2745")
+		(property "Reference" "H10"
+			(at 87.63 240.0299 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MountingHole_2.2mm_M2"
+			(at 87.63 242.5699 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "MountingHole:MountingHole_2.2mm_M2"
+			(at 85.09 241.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 85.09 241.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 85.09 241.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "pcb"
+				(path "/ca1682eb-af97-4baf-a70b-d30c3b256c66"
+					(reference "H10")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "kbd:SW_PUSH")
 		(at 224.79 168.91 0)
 		(unit 1)
@@ -16004,7 +16406,7 @@
 				)
 			)
 		)
-		(property "Footprint" "kbd:keyswitch_cherrymx_hotswap_1u"
+		(property "Footprint" "lib:keyswitch_cherrymx_hotswap_1u"
 			(at 224.79 168.91 0)
 			(effects
 				(font
@@ -16040,6 +16442,134 @@
 			(project "pcb"
 				(path "/ca1682eb-af97-4baf-a70b-d30c3b256c66"
 					(reference "SW54")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Mechanical:MountingHole")
+		(at 85.09 251.46 0)
+		(unit 1)
+		(exclude_from_sim yes)
+		(in_bom no)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "8e383679-79d4-4cb8-b125-b5d8c3c4355e")
+		(property "Reference" "H12"
+			(at 87.63 250.1899 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MountingHole_2.2mm_M2"
+			(at 87.63 252.7299 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "MountingHole:MountingHole_2.2mm_M2"
+			(at 85.09 251.46 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 85.09 251.46 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 85.09 251.46 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "pcb"
+				(path "/ca1682eb-af97-4baf-a70b-d30c3b256c66"
+					(reference "H12")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Mechanical:MountingHole")
+		(at 85.09 246.38 0)
+		(unit 1)
+		(exclude_from_sim yes)
+		(in_bom no)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "90c21e2d-617e-40d6-aadb-42fe4a69e087")
+		(property "Reference" "H11"
+			(at 87.63 245.1099 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MountingHole_2.2mm_M2"
+			(at 87.63 247.6499 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "MountingHole:MountingHole_2.2mm_M2"
+			(at 85.09 246.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 85.09 246.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 85.09 246.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "pcb"
+				(path "/ca1682eb-af97-4baf-a70b-d30c3b256c66"
+					(reference "H11")
 					(unit 1)
 				)
 			)
@@ -16210,6 +16740,70 @@
 			(project "pcb"
 				(path "/ca1682eb-af97-4baf-a70b-d30c3b256c66"
 					(reference "D28")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Mechanical:MountingHole")
+		(at 52.07 236.22 0)
+		(unit 1)
+		(exclude_from_sim yes)
+		(in_bom no)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "988f518f-1740-4140-9492-7b6af5dd74c7")
+		(property "Reference" "H1"
+			(at 54.61 234.9499 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MountingHole_2.2mm_M2"
+			(at 54.61 237.4899 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "MountingHole:MountingHole_2.2mm_M2"
+			(at 52.07 236.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 52.07 236.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 52.07 236.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project ""
+				(path "/ca1682eb-af97-4baf-a70b-d30c3b256c66"
+					(reference "H1")
 					(unit 1)
 				)
 			)
@@ -16416,7 +17010,7 @@
 				)
 			)
 		)
-		(property "Footprint" "keebio:Resistor-Hybrid"
+		(property "Footprint" "lib:Resistor-Hybrid_rev"
 			(at 115.57 119.888 90)
 			(effects
 				(font
@@ -16637,7 +17231,7 @@
 				)
 			)
 		)
-		(property "Footprint" "kbd:keyswitch_cherrymx_hotswap_1u"
+		(property "Footprint" "lib:keyswitch_cherrymx_hotswap_1u"
 			(at 275.59 85.09 0)
 			(effects
 				(font
@@ -16673,6 +17267,134 @@
 			(project "pcb"
 				(path "/ca1682eb-af97-4baf-a70b-d30c3b256c66"
 					(reference "SW3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Mechanical:MountingHole")
+		(at 85.09 256.54 0)
+		(unit 1)
+		(exclude_from_sim yes)
+		(in_bom no)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "a586ce9d-7c94-4bc9-8af1-2c3c0cd8dd62")
+		(property "Reference" "H13"
+			(at 87.63 255.2699 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MountingHole_2.2mm_M2"
+			(at 87.63 257.8099 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "MountingHole:MountingHole_2.2mm_M2"
+			(at 85.09 256.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 85.09 256.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 85.09 256.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "pcb"
+				(path "/ca1682eb-af97-4baf-a70b-d30c3b256c66"
+					(reference "H13")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Mechanical:MountingHole")
+		(at 85.09 266.7 0)
+		(unit 1)
+		(exclude_from_sim yes)
+		(in_bom no)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "aa106f55-66df-49cf-ba02-0cf6fe138b97")
+		(property "Reference" "H15"
+			(at 87.63 265.4299 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MountingHole_2.2mm_M2"
+			(at 87.63 267.9699 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "MountingHole:MountingHole_2.2mm_M2"
+			(at 85.09 266.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 85.09 266.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 85.09 266.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "pcb"
+				(path "/ca1682eb-af97-4baf-a70b-d30c3b256c66"
+					(reference "H15")
 					(unit 1)
 				)
 			)
@@ -16858,7 +17580,7 @@
 				)
 			)
 		)
-		(property "Footprint" "kbd:keyswitch_cherrymx_hotswap_1u"
+		(property "Footprint" "lib:keyswitch_cherrymx_hotswap_1u"
 			(at 224.79 105.41 0)
 			(effects
 				(font
@@ -16998,7 +17720,7 @@
 				)
 			)
 		)
-		(property "Footprint" "kbd:keyswitch_cherrymx_hotswap_1u"
+		(property "Footprint" "lib:keyswitch_cherrymx_hotswap_1u"
 			(at 351.79 168.91 0)
 			(effects
 				(font
@@ -17220,7 +17942,7 @@
 				)
 			)
 		)
-		(property "Footprint" "kbd:keyswitch_cherrymx_hotswap_1u"
+		(property "Footprint" "lib:keyswitch_cherrymx_hotswap_1u"
 			(at 300.99 73.66 0)
 			(effects
 				(font
@@ -17357,7 +18079,7 @@
 				)
 			)
 		)
-		(property "Footprint" "kbd:keyswitch_cherrymx_hotswap_1u"
+		(property "Footprint" "lib:keyswitch_cherrymx_hotswap_1u"
 			(at 326.39 148.59 0)
 			(effects
 				(font
@@ -17424,7 +18146,7 @@
 				)
 			)
 		)
-		(property "Footprint" "kbd:keyswitch_cherrymx_hotswap_1u"
+		(property "Footprint" "lib:keyswitch_cherrymx_hotswap_1u"
 			(at 250.19 137.16 0)
 			(effects
 				(font
@@ -17753,6 +18475,70 @@
 		)
 	)
 	(symbol
+		(lib_id "Mechanical:MountingHole")
+		(at 52.07 251.46 0)
+		(unit 1)
+		(exclude_from_sim yes)
+		(in_bom no)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "bdea5be5-5abb-4e27-9074-e7c5f3e1c7dc")
+		(property "Reference" "H4"
+			(at 54.61 250.1899 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MountingHole_2.2mm_M2"
+			(at 54.61 252.7299 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "MountingHole:MountingHole_2.2mm_M2"
+			(at 52.07 251.46 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 52.07 251.46 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 52.07 251.46 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "pcb"
+				(path "/ca1682eb-af97-4baf-a70b-d30c3b256c66"
+					(reference "H4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "kbd:SW_PUSH")
 		(at 300.99 85.09 0)
 		(unit 1)
@@ -17778,7 +18564,7 @@
 				)
 			)
 		)
-		(property "Footprint" "kbd:keyswitch_cherrymx_hotswap_1u"
+		(property "Footprint" "lib:keyswitch_cherrymx_hotswap_1u"
 			(at 300.99 85.09 0)
 			(effects
 				(font
@@ -17919,7 +18705,7 @@
 				)
 			)
 		)
-		(property "Footprint" "kbd:keyswitch_cherrymx_hotswap_1u"
+		(property "Footprint" "lib:keyswitch_cherrymx_hotswap_1u"
 			(at 326.39 85.09 0)
 			(effects
 				(font
@@ -18043,6 +18829,134 @@
 			(project "pcb"
 				(path "/ca1682eb-af97-4baf-a70b-d30c3b256c66"
 					(reference "D8")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Mechanical:MountingHole")
+		(at 85.09 236.22 0)
+		(unit 1)
+		(exclude_from_sim yes)
+		(in_bom no)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "c7fa013f-903f-430a-a4bb-afb2583647e6")
+		(property "Reference" "H9"
+			(at 87.63 234.9499 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MountingHole_2.2mm_M2"
+			(at 87.63 237.4899 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "MountingHole:MountingHole_2.2mm_M2"
+			(at 85.09 236.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 85.09 236.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 85.09 236.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "pcb"
+				(path "/ca1682eb-af97-4baf-a70b-d30c3b256c66"
+					(reference "H9")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Mechanical:MountingHole")
+		(at 52.07 246.38 0)
+		(unit 1)
+		(exclude_from_sim yes)
+		(in_bom no)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "c89df264-8688-45a6-8ff2-fbd416cbb7b1")
+		(property "Reference" "H3"
+			(at 54.61 245.1099 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MountingHole_2.2mm_M2"
+			(at 54.61 247.6499 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "MountingHole:MountingHole_2.2mm_M2"
+			(at 52.07 246.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 52.07 246.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 52.07 246.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "pcb"
+				(path "/ca1682eb-af97-4baf-a70b-d30c3b256c66"
+					(reference "H3")
 					(unit 1)
 				)
 			)
@@ -18299,7 +19213,7 @@
 				)
 			)
 		)
-		(property "Footprint" "kbd:keyswitch_cherrymx_hotswap_1u"
+		(property "Footprint" "lib:keyswitch_cherrymx_hotswap_1u"
 			(at 250.19 148.59 0)
 			(effects
 				(font
@@ -18454,7 +19368,7 @@
 				)
 			)
 		)
-		(property "Footprint" "kbd:keyswitch_cherrymx_hotswap_1u"
+		(property "Footprint" "lib:keyswitch_cherrymx_hotswap_1u"
 			(at 250.19 105.41 0)
 			(effects
 				(font
@@ -18741,7 +19655,7 @@
 				)
 			)
 		)
-		(property "Footprint" "kbd:keyswitch_cherrymx_hotswap_1u"
+		(property "Footprint" "lib:keyswitch_cherrymx_hotswap_1u"
 			(at 326.39 73.66 0)
 			(effects
 				(font
@@ -18777,6 +19691,70 @@
 			(project "pcb"
 				(path "/ca1682eb-af97-4baf-a70b-d30c3b256c66"
 					(reference "SW34")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Mechanical:MountingHole")
+		(at 52.07 241.3 0)
+		(unit 1)
+		(exclude_from_sim yes)
+		(in_bom no)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "e4adb3ce-f025-49a0-ad31-e2d968e3bd54")
+		(property "Reference" "H2"
+			(at 54.61 240.0299 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MountingHole_2.2mm_M2"
+			(at 54.61 242.5699 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "MountingHole:MountingHole_2.2mm_M2"
+			(at 52.07 241.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 52.07 241.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 52.07 241.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "pcb"
+				(path "/ca1682eb-af97-4baf-a70b-d30c3b256c66"
+					(reference "H2")
 					(unit 1)
 				)
 			)
@@ -18882,7 +19860,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "keebio:Resistor-Hybrid"
+		(property "Footprint" "lib:Resistor-Hybrid"
 			(at 151.892 68.58 90)
 			(effects
 				(font
@@ -19189,6 +20167,70 @@
 		)
 	)
 	(symbol
+		(lib_id "Mechanical:MountingHole")
+		(at 85.09 261.62 0)
+		(unit 1)
+		(exclude_from_sim yes)
+		(in_bom no)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "eefc9458-9a51-45a3-9a5a-384aff63b13c")
+		(property "Reference" "H14"
+			(at 87.63 260.3499 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MountingHole_2.2mm_M2"
+			(at 87.63 262.8899 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "MountingHole:MountingHole_2.2mm_M2"
+			(at 85.09 261.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 85.09 261.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 85.09 261.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "pcb"
+				(path "/ca1682eb-af97-4baf-a70b-d30c3b256c66"
+					(reference "H14")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "kbd:SW_PUSH")
 		(at 224.79 73.66 0)
 		(unit 1)
@@ -19214,7 +20256,7 @@
 				)
 			)
 		)
-		(property "Footprint" "kbd:keyswitch_cherrymx_hotswap_1u"
+		(property "Footprint" "lib:keyswitch_cherrymx_hotswap_1u"
 			(at 224.79 73.66 0)
 			(effects
 				(font
@@ -19508,7 +20550,7 @@
 				)
 			)
 		)
-		(property "Footprint" "kbd:keyswitch_cherrymx_hotswap_1u"
+		(property "Footprint" "lib:keyswitch_cherrymx_hotswap_1u"
 			(at 351.79 137.16 0)
 			(effects
 				(font

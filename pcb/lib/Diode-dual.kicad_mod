@@ -1,0 +1,153 @@
+(footprint "Diode-dual"
+	(version 20240108)
+	(generator "pcbnew")
+	(generator_version "8.0")
+	(layer "F.Cu")
+	(property "Reference" "D**"
+		(at -0.0254 1.4 0)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "b053fb25-d0ee-4220-9b96-4c14082d7861")
+		(effects
+			(font
+				(size 0.8 0.8)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "D"
+		(at 0 -1.925 0)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "aa683ba4-f2c0-4757-b946-31f114ee6bcf")
+		(effects
+			(font
+				(size 0.8 0.8)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Footprint" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "39dc3575-a384-44ae-a9a9-73499eefa27c")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "85418833-b29f-4d5c-8a28-85632caff818")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "2b0031f4-14f8-433a-9ca4-093e70a8592b")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr smd)
+	(fp_rect
+		(start -4.75 -0.85)
+		(end 4.75 0.85)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(fill none)
+		(layer "F.CrtYd")
+		(uuid "f611d757-53ca-48be-8de4-352cd9504385")
+	)
+	(pad "1" smd rect
+		(at 1.4 0)
+		(size 1.6 1.2)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(uuid "eba3d8df-7304-404d-a8b2-eebea97db48d")
+	)
+	(pad "1" smd rect
+		(at 1.4 0)
+		(size 1.6 1.2)
+		(layers "B.Cu" "B.Paste" "B.Mask")
+		(uuid "3d4ca05e-c194-4e47-95bf-4b581820a270")
+	)
+	(pad "1" smd rect
+		(at 2.5 0)
+		(size 2.9 0.5)
+		(layers "F.Cu")
+		(uuid "c2ce325a-9f63-4b6e-937e-656af15b9afa")
+	)
+	(pad "1" smd rect
+		(at 2.5 0)
+		(size 2.9 0.5)
+		(layers "B.Cu")
+		(uuid "00009a0f-8980-4ebb-babd-31022ad0453d")
+	)
+	(pad "1" thru_hole rect
+		(at 3.9 0)
+		(size 1.6 1.6)
+		(drill 1)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "224a3e87-84ee-4114-ac8e-4c63f0f71663")
+	)
+	(pad "2" thru_hole circle
+		(at -3.9 0)
+		(size 1.6 1.6)
+		(drill 1)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "728909b3-fb49-426a-bbc8-6fb540dd65f5")
+	)
+	(pad "2" smd rect
+		(at -2.5 0)
+		(size 2.9 0.5)
+		(layers "F.Cu")
+		(uuid "8e78639d-7919-49f3-9ced-e6ff4cc3a5e8")
+	)
+	(pad "2" smd rect
+		(at -2.5 0)
+		(size 2.9 0.5)
+		(layers "B.Cu")
+		(uuid "cfb19d9e-2136-4cc6-8ae5-87c6ef38a272")
+	)
+	(pad "2" smd rect
+		(at -1.4 0)
+		(size 1.6 1.2)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(uuid "f09080a0-d5cb-4cff-8e35-6937d625b321")
+	)
+	(pad "2" smd rect
+		(at -1.4 0)
+		(size 1.6 1.2)
+		(layers "B.Cu" "B.Paste" "B.Mask")
+		(uuid "c2f58f8b-c5fe-45f0-b84e-1e032e96061f")
+	)
+	(model "${KICAD6_3DMODEL_DIR}/Diodes_SMD.3dshapes/D_SOD-123.step"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)

@@ -6,6 +6,7 @@
 	(property "Reference" "REF**"
 		(at 0 -1.95 0)
 		(layer "F.SilkS")
+		(hide yes)
 		(uuid "1efcc3df-967a-4089-a9fe-c9cb2a0ceeec")
 		(effects
 			(font
@@ -66,7 +67,7 @@
 	(attr smd)
 	(fp_poly
 		(pts
-			(xy -4.05 0.35) (xy -4.05 1.5) (xy -2.8 1.5)
+			(xy -4.05 0.925) (xy -4.05 1.5) (xy -3.425 1.5)
 		)
 		(stroke
 			(width 0.05)
@@ -78,7 +79,7 @@
 	)
 	(fp_poly
 		(pts
-			(xy -4.05 0.35) (xy -4.05 1.5) (xy -2.8 1.5)
+			(xy -4.05 0.925) (xy -4.05 1.5) (xy -3.425 1.5)
 		)
 		(stroke
 			(width 0.05)
