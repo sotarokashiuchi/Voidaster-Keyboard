@@ -37,9 +37,9 @@
         "other_text_thickness": 0.15,
         "other_text_upright": false,
         "pads": {
-          "drill": 0.0,
-          "height": 0.5,
-          "width": 2.9
+          "drill": 1.0,
+          "height": 1.524,
+          "width": 1.524
         },
         "silk_line_width": 0.1,
         "silk_text_italic": false,
@@ -58,7 +58,11 @@
           "width": 0.0
         }
       ],
-      "drc_exclusions": [],
+      "drc_exclusions": [
+        "items_not_allowed|200124776|57967318|a74e92fe-5f72-4bfb-95c5-82183aa0c06e|00000000-0000-0000-0000-000000000000",
+        "items_not_allowed|200124776|61467318|c524d35c-87d8-43d5-b620-978929fdade9|00000000-0000-0000-0000-000000000000",
+        "items_not_allowed|201774999|104283318|62111055-7239-4dc6-8878-7ec3a9772a39|00000000-0000-0000-0000-000000000000"
+      ],
       "meta": {
         "version": 2
       },
@@ -101,7 +105,7 @@
         "silk_overlap": "warning",
         "skew_out_of_range": "error",
         "solder_mask_bridge": "error",
-        "starved_thermal": "error",
+        "starved_thermal": "ignore",
         "text_height": "warning",
         "text_thickness": "warning",
         "through_hole_pad_without_hole": "error",
@@ -488,7 +492,7 @@
       "gencad": "",
       "idf": "",
       "netlist": "",
-      "plot": "",
+      "plot": "/home/sotaro/Downloads/",
       "pos_files": "",
       "specctra_dsn": "",
       "step": "",
