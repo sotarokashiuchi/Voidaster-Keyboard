@@ -4,26 +4,26 @@
 
 #define COL_SIZE 7
 typedef enum {
-  COLNULL=0,
-  COL0=2,
-  COL1=1,
-  COL2=13,
-  COL3=12,
-  COL4=11,
-  COL5=10,
-  COL6=9,
+  COL0,
+  COL1,
+  COL2,
+  COL3,
+  COL4,
+  COL5,
+  COL6,
 } col_t;
 col_t Col;
+int ColPin[COL_SIZE] = {2, 1, 13, 12, 11, 10, 9};
 
 #define ROW_SIZE 4
 typedef enum {
-  ROWNULL=0,
-  ROW0=38,
-  ROW1=39,
-  ROW2=40,
-  ROW3=41,
+  ROW0,
+  ROW1,
+  ROW2,
+  ROW3,
 } row_t;
 row_t Row;
+int RowPin[ROW_SIZE] = {38, 39, 40, 41};
 
 #define LAYER_SIZE 1
 typedef enum {
@@ -38,7 +38,7 @@ typedef struct keyinfo_tag {
   int keycode;
   struct keyinfo_tag *next;
 } keyinfo_t;
-keyinfo_t PressKeycodeList = {ROWNULL, COLNULL, 0, NULL};
+keyinfo_t PressKeycodeList = {ROW0, COL0, 0, NULL};
 
 USBHIDKeyboard Keyboard;
 esp_task_wdt_config_t config = {10000, true};
@@ -102,7 +102,6 @@ void generate_keycode_release(void){
 
 
 void check_row0(){
-  // Keyboard.press('a');
   Serial.println("check_row0");
   Row = ROW0;
   generate_keycode_press();
@@ -110,22 +109,17 @@ void check_row0(){
 
 void setup() {
   // put your Hello world Hello world setup code here, to run once:
-  pinMode(COL0, OUTPUT);
-  pinMode(COL1, OUTPUT);
-  pinMode(COL2, OUTPUT);
-  pinMode(COL3, OUTPUT);
-  pinMode(COL4, OUTPUT);
-  pinMode(COL5, OUTPUT);
-  pinMode(COL6, OUTPUT);
-  pinMode(ROW0, INPUT);
-  pinMode(ROW1, INPUT);
-  pinMode(ROW2, INPUT);
-  pinMode(ROW3, INPUT);
+  for(int i=0; i<COL_SIZE; i++){
+    pinMode(ColPin[i], OUTPUT);
+  }
+  for(int i=0; i<ROW_SIZE; i++){
+    pinMode(RowPin[i], INPUT);
+  }
 
   Keyboard.begin();
   USB.begin();
 
-  attachInterrupt(digitalPinToInterrupt(ROW0), check_row0, RISING);
+  attachInterrupt(digitalPinToInterrupt(RowPin[ROW0]), check_row0, RISING);
   Layer = MAIN;
 
   Keyboard.println("Completed Setup");
@@ -141,22 +135,13 @@ void setup() {
 
 void loop() {
   // put your main code here, to run repeatedly:
-  int col;
-  for(col=0; col<7; col++){
-    switch(col){
-      case 0: Col=COL0; break;
-      case 1: Col=COL1; break;
-      case 2: Col=COL2; break;
-      case 3: Col=COL3; break;
-      case 4: Col=COL4; break;
-      case 5: Col=COL5; break;
-      case 6: Col=COL6; break;
-    }
+  int pin;
+  for(Col=COL0; Col<COL_SIZE; Col = (col_t)((int)Col + 1)){
     Serial.println(Col);
-    digitalWrite(Col, HIGH);
+    digitalWrite(ColPin[Col], HIGH);
     //generate_keycode_release();
     delay(500);
-    digitalWrite(Col, LOW);
+    digitalWrite(ColPin[Col], LOW);
     delay(500);
   }
 
