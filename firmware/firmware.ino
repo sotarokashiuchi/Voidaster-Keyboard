@@ -31,14 +31,12 @@ typedef enum {
 } layer_t;
 layer_t Layer;
 
-struct keyinfo_tag;
-typedef struct keyinfo_tag {
+typedef struct {
   row_t row;
   col_t col;
   uint8_t keycode;
-  struct keyinfo_tag *next;
 } keyinfo_t;
-keyinfo_t PressKeycodeList = {ROW0, COL0, 0, NULL};
+keyinfo_t KeyPress[6];
 
 USBHIDKeyboard Keyboard;
 esp_task_wdt_config_t config = {10000, true};
@@ -54,31 +52,14 @@ uint8_t KeyMapping[LAYER_SIZE][ROW_SIZE][COL_SIZE] = {
   },
 };
 
-void new_press_keycode(){
-  keyinfo_t* p = (keyinfo_t*)malloc(sizeof(keyinfo_t));
-  p->row = Row;
-  p->col = Col;
-  p->keycode = KeyMapping[Layer][Row][Col];
-  p->next = PressKeycodeList.next;
-  PressKeycodeList.next = p;
-}
-
-void delete_press_keycode(keyinfo_t* p){
-  keyinfo_t* temp;
-  temp = p->next;
-  p->next = p->next->next;
-  free(temp);
-}
-
-void display_press_keycode(){
-  Serial.println("display");
-  for(keyinfo_t* p = PressKeycodeList.next; p!=NULL; p=p->next){
-    Serial.print("row:");
-    Serial.print(p->row);
-    Serial.print(" col:");
-    Serial.print(p->col);
-    Serial.print(" keycode:");
-    Serial.println(p->keycode);
+void add_key_press(){
+  for(int i=0; i<6; i++){
+    if(KeyPress[i].keycode==0x00){
+      KeyPress[i].row = Row;
+      KeyPress[i].col = Col;
+      KeyPress[i].keycode = KeyMapping[Layer][Row][Col];
+      return;
+    }
   }
 }
 
@@ -88,20 +69,18 @@ void generate_keycode_press(void){
     Serial.print("Press -> ");
     Serial.println(KeyMapping[Layer][Row][Col], DEC);
     KeyState[Row][Col] = 1;
-    new_press_keycode();
-    display_press_keycode();
+    add_key_press();
   }
 }
 
 void generate_keycode_release(void){
-  for(keyinfo_t* p=&PressKeycodeList; p!=NULL && p->next!=NULL; p=p->next){
-    if(p->next->col == Col && digitalRead(RowPin[p->next->row]) == LOW){
-      Keyboard.releaseRaw(p->next->keycode);
+  for(int i=0; i<6; i++){
+    if(KeyPress[i].keycode != 0x00 && KeyPress[i].col == Col && digitalRead(RowPin[KeyPress[i].row]) == LOW){
+      Keyboard.releaseRaw(KeyPress[i].keycode);
       Serial.print("Release -> ");
-      Serial.println(p->next->keycode);
-      KeyState[p->next->row][Col] = 0;
-      delete_press_keycode(p);
-      display_press_keycode();
+      Serial.println(KeyPress[i].keycode);
+      KeyState[KeyPress[i].row][Col] = 0;
+      KeyPress[i].keycode = 0x00;
     }
   }
 }
@@ -120,7 +99,10 @@ void setup() {
 
   Layer = MAIN;
 
-  Keyboard.println("Completed Setup");
+  for(int i=0; i<6; i++){
+    KeyPress[i].keycode = 0x00;
+  }
+
   Serial.begin(115200);
   Serial.println("SETUP!");
 }
@@ -130,7 +112,7 @@ void loop() {
   int pin;
   for(Col=COL0; Col<COL_SIZE; Col = (col_t)((int)Col+1)){
     digitalWrite(ColPin[Col], HIGH);
-    
+
     for(Row=ROW0; Row<ROW_SIZE; Row = (row_t)((int)Row+1)){
         if(digitalRead(RowPin[Row]) == HIGH){
           Serial.print(Layer);
