@@ -112,7 +112,7 @@ void setup() {
     pinMode(ColPin[i], OUTPUT);
   }
   for(int i=0; i<ROW_SIZE; i++){
-    pinMode(RowPin[i], INPUT);
+    pinMode(RowPin[i], INPUT_PULLDOWN);
   }
 
   Keyboard.begin();
@@ -125,25 +125,22 @@ void setup() {
   Serial.println("SETUP!");
 }
 
-
-
 void loop() {
   // put your main code here, to run repeatedly:
   int pin;
   for(Col=COL0; Col<COL_SIZE; Col = (col_t)((int)Col+1)){
     digitalWrite(ColPin[Col], HIGH);
-    delay(10);
+    
     for(Row=ROW0; Row<ROW_SIZE; Row = (row_t)((int)Row+1)){
-      if(digitalRead(RowPin[Row]) == HIGH){
-        Serial.print(Layer);
-        Serial.print(Row);
-        Serial.println(Col);
-        generate_keycode_press();
-      }
+        if(digitalRead(RowPin[Row]) == HIGH){
+          Serial.print(Layer);
+          Serial.print(Row);
+          Serial.println(Col);
+          generate_keycode_press();
+        }
     }
     generate_keycode_release();
     
     digitalWrite(ColPin[Col], LOW);
-    delay(10);
   }
 }
