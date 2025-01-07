@@ -47,14 +47,10 @@ unsigned int KeyState[ROW_SIZE][COL_SIZE] = {0};
 
 uint8_t KeyMapping[LAYER_SIZE][ROW_SIZE][COL_SIZE] = {
   {
-    {'a', 'a', 'q', 'w', 'e', 'r', 't',},
-    {'a', 'a', 'q', 'w', 'e', 'r', 't',},
-    {'a', 'a', 'q', 'w', 'e', 'r', 't',},
-    {'a', 'a', 'q', 'w', 'e', 'r', 't',},
-        // KC.A, KC.A, KC.Q, KC.W, KC.E, KC.R, KC.T,
-        // KC.A, KC.A, KC.A, KC.S, KC.D, KC.F, KC.G,
-        // KC.A, KC.A, KC.Z, KC.X, KC.C, KC.V, KC.B,
-        // KC.A, KC.A, KC.A, KC.A, KC.A, KC.A, KC.A,
+    {HID_KEY_SHIFT_LEFT, HID_KEY_SHIFT_LEFT, HID_KEY_Q, HID_KEY_W, HID_KEY_E, HID_KEY_R, HID_KEY_T},
+    {HID_KEY_SHIFT_LEFT, HID_KEY_SHIFT_LEFT, HID_KEY_A, HID_KEY_S, HID_KEY_D, HID_KEY_F, HID_KEY_G},
+    {HID_KEY_SHIFT_LEFT, HID_KEY_SHIFT_LEFT, HID_KEY_Z, HID_KEY_X, HID_KEY_C, HID_KEY_V, HID_KEY_B},
+    {HID_KEY_SHIFT_LEFT, HID_KEY_SHIFT_LEFT, HID_KEY_Q, HID_KEY_W, HID_KEY_E, HID_KEY_R, HID_KEY_T},
   },
 };
 
@@ -88,7 +84,7 @@ void display_press_keycode(){
 
 void generate_keycode_press(void){
   if(KeyState[Row][Col] == 0){
-    Keyboard.press(KeyMapping[Layer][Row][Col]);
+    Keyboard.pressRaw(KeyMapping[Layer][Row][Col]);
     Serial.print("Press -> ");
     Serial.println(KeyMapping[Layer][Row][Col], DEC);
     KeyState[Row][Col] = 1;
@@ -100,7 +96,7 @@ void generate_keycode_press(void){
 void generate_keycode_release(void){
   for(keyinfo_t* p=&PressKeycodeList; p!=NULL && p->next!=NULL; p=p->next){
     if(p->next->col == Col && digitalRead(RowPin[p->next->row]) == LOW){
-      Keyboard.release(p->next->keycode);
+      Keyboard.releaseRaw(p->next->keycode);
       Serial.print("Release -> ");
       Serial.println(p->next->keycode);
       KeyState[p->next->row][Col] = 0;
