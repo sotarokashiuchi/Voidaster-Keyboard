@@ -1,6 +1,5 @@
 #include "USB.h"
 #include "USBHIDKeyboard.h"
-#include "esp_task_wdt.h"
 
 #define COL_SIZE 7
 typedef enum {
@@ -41,7 +40,6 @@ typedef struct {
 keyinfo_t KeyPress[6];
 
 USBHIDKeyboard Keyboard;
-esp_task_wdt_config_t config = {10000, true};
 
 unsigned int KeyState[ROW_SIZE][COL_SIZE] = {0};
 
