@@ -77,11 +77,10 @@ void generate_keycode_press(void){
     }
     add_key_press();
 
-    if(keycode < 0xE8){
-      Keyboard.pressRaw(keycode);
-    } else {
+    Serial1.write(0b00000001);
+    Serial1.write(keycode);
+    if(keycode >= 0xE8){
       Layer = (layer_t)(keycode - 0xE8);
-      Serial1.write(keycode);
     }
 
     Serial.print("Press -> ");
@@ -93,13 +92,11 @@ void generate_keycode_press(void){
 void generate_keycode_release(void){
   for(int i=0; i<6; i++){
     if(KeyPress[i].keycode != 0x00 && KeyPress[i].col == Col && digitalRead(RowPin[KeyPress[i].row]) == LOW){
-      if(KeyPress[i].keycode < 0xE8){
-        Keyboard.releaseRaw(KeyPress[i].keycode);
-      } else {
+      Serial1.write(0b00000000);
+      Serial1.write(KeyPress[i].keycode);
+      if(KeyPress[i].keycode >= 0xE8){
         Layer = MAIN;
-        Serial1.write(LAYER(MAIN));
       }
-
       Serial.print("Release -> ");
       Serial.println(KeyPress[i].keycode);
       KeyState[KeyPress[i].row][Col] = 0;
@@ -128,37 +125,15 @@ void setup() {
 
   Serial.begin(115200);
   Serial.println("SETUP!");
-  Serial1.begin(115200, SERIAL_8N1, 18, 17);
+  Serial1.begin(115200, SERIAL_8N1, 17, 18);
 }
 
 void loop() {
   // put your main code here, to run repeatedly:
-  if(Serial1.available() >= 2){
-    uint8_t control = Serial1.read();
-    uint8_t keycode = Serial1.read();
-
-    if(control == 0b00000001){
-      // press
-      if(keycode < 0xE8){
-        Keyboard.pressRaw(keycode);
-      } else {
-        Layer = (layer_t)(keycode - 0xE8);
-      }
-      Serial.print("Press -> ");
-      Serial.println(keycode, DEC);
-    } else {
-      // release
-      if(keycode < 0xE8){
-        Keyboard.releaseRaw(keycode);
-      } else {
-        Layer = MAIN;
-      }
-
-      Serial.print("Release -> ");
-      Serial.println(keycode, DEC);
-    }
+  if(Serial1.available() >= 1){
+    Layer = (layer_t)(Serial1.read() - 0xE8);
   }
-  
+
   for(Col=COL0; Col<COL_SIZE; Col = (col_t)((int)Col+1)){
     digitalWrite(ColPin[Col], HIGH);
 
