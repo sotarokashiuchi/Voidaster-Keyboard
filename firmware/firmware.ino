@@ -25,9 +25,11 @@ typedef enum {
 row_t Row;
 int RowPin[ROW_SIZE] = {38, 39, 40, 41};
 
-#define LAYER_SIZE 1
+#define LAYER_SIZE 2
+#define LAYER(x) ((x)+0xE8)
 typedef enum {
   MAIN,
+  NUMBER,
 } layer_t;
 layer_t Layer;
 
@@ -48,7 +50,10 @@ uint8_t KeyMapping[LAYER_SIZE][ROW_SIZE][COL_SIZE] = {
     {HID_KEY_SHIFT_LEFT, HID_KEY_SHIFT_LEFT, HID_KEY_Q, HID_KEY_W, HID_KEY_E, HID_KEY_R, HID_KEY_T},
     {HID_KEY_SHIFT_LEFT, HID_KEY_SHIFT_LEFT, HID_KEY_A, HID_KEY_S, HID_KEY_D, HID_KEY_F, HID_KEY_G},
     {HID_KEY_SHIFT_LEFT, HID_KEY_SHIFT_LEFT, HID_KEY_Z, HID_KEY_X, HID_KEY_C, HID_KEY_V, HID_KEY_B},
-    {HID_KEY_SHIFT_LEFT, HID_KEY_SHIFT_LEFT, HID_KEY_Q, HID_KEY_W, HID_KEY_E, HID_KEY_R, HID_KEY_T},
+    {HID_KEY_SHIFT_LEFT, HID_KEY_SHIFT_LEFT, HID_KEY_Q, HID_KEY_W, HID_KEY_E, LAYER(NUMBER), HID_KEY_T},
+  },
+  {
+    {HID_KEY_Q, HID_KEY_Q, HID_KEY_Q, HID_KEY_Q, },
   },
 };
 
@@ -64,19 +69,35 @@ void add_key_press(){
 }
 
 void generate_keycode_press(void){
+  uint8_t keycode;
   if(KeyState[Row][Col] == 0){
-    Keyboard.pressRaw(KeyMapping[Layer][Row][Col]);
-    Serial.print("Press -> ");
-    Serial.println(KeyMapping[Layer][Row][Col], DEC);
-    KeyState[Row][Col] = 1;
+    keycode = KeyMapping[Layer][Row][Col];
+    if(keycode==0x00){
+      return;
+    }
     add_key_press();
+
+    if(keycode < 0xE8){
+      Keyboard.pressRaw(keycode);
+    } else {
+      Layer = (layer_t)(keycode - 0xE8);
+    }
+
+    Serial.print("Press -> ");
+    Serial.println(keycode, DEC);
+    KeyState[Row][Col] = 1;
   }
 }
 
 void generate_keycode_release(void){
   for(int i=0; i<6; i++){
     if(KeyPress[i].keycode != 0x00 && KeyPress[i].col == Col && digitalRead(RowPin[KeyPress[i].row]) == LOW){
-      Keyboard.releaseRaw(KeyPress[i].keycode);
+      if(KeyPress[i].keycode < 0xE8){
+        Keyboard.releaseRaw(KeyPress[i].keycode);
+      } else {
+        Layer = MAIN;
+      }
+
       Serial.print("Release -> ");
       Serial.println(KeyPress[i].keycode);
       KeyState[KeyPress[i].row][Col] = 0;
