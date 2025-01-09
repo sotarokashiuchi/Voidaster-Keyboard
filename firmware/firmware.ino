@@ -108,7 +108,6 @@ void generate_keycode_press(void){
       Layer = (layer_t)(keycode - 0xE8);
     }
 #endif
-
     Serial.print("Press -> ");
     Serial.println(keycode, DEC);
     KeyState[Row][Col] = 1;
@@ -133,7 +132,6 @@ void generate_keycode_release(void){
         Layer = MAIN;
       }
 #endif
-
       Serial.print("Release -> ");
       Serial.println(KeyPress[i].keycode);
       KeyState[KeyPress[i].row][Col] = 0;
